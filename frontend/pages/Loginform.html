@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAMILY APP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body{
+    height: 100vh; 
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px; 
+  background-image: url("../image/japan.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+
+.main {
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px; 
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    width: 50%;
+    font-size: 16px;
+
+}
+
+
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10cqmax;
+    box-shadow: 0 0 5px cyan 0 0 25px cyan;
+
+} 
+
+.wrap:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan , 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+    </style>
+</head>
+<body>
+    <div class ="main">
+    <form>
+         <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+    </form>
+     <p id="gotoregistration">Not registered?
+            <a href="#" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
+        <script>
+            const redirecttoregistration = document.getElementById("gotoregistration"); 
+
+            redirecttoregistration.addEventListener("click", function gotoregistration(){
+                window.location.href = "Registration.html"; 
+            })
+        </script>
+    </div>
+</body>
+</html>

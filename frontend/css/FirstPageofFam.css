@@ -1,0 +1,58 @@
+body{
+    height: 100vh; 
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px; 
+  background-image: url("../image/japan.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+.btn2{
+    cursor: pointer;
+    border-radius: 9999px;
+    background-color: transparent;
+    height: 50px; 
+    width: 200px; 
+    color: white; 
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 5px rgba(145, 92, 182, .4);
+}
+
+.btn1{
+    cursor: pointer;
+    border-radius: 9999px;
+    background-color: transparent;
+    height: 50px; 
+    width: 200px; 
+    color: white; 
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 5px rgba(145, 92, 182, .4);
+}
+
+.buttonABOUTTHEAPP{
+     cursor: cell;
+    border-radius: 99px;
+    background-color: transparent;
+    height: 50px; 
+    width: 200px; 
+    color: white; 
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 5px rgba(145, 92, 182, .4);
+    margin: 1px 0;  
+    padding: 1px;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    list-style-type: none;
+}

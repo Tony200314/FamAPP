@@ -1,0 +1,25 @@
+
+.firstpage button{
+
+}
+
+.navbar{
+    width: 100%;
+    float: left;
+    justify-content: space-between;
+}
+
+.navbarcomponent{
+    margin: 0;
+    padding: 0;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    list-style-type: none;
+}
+
+.navbar li{
+     display: inline;
+     margin: 1px 0; 
+     border : 1px solid #999; 
+}
