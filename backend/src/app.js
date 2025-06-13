@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
 const messageRoutes = require('./routes/message');
 
+const app = express(); 
+
 
 
 // Middleware
@@ -18,5 +20,6 @@ app.use('/api/message', messageRoutes);
 app.get('/', (req,res)=>{
     res.send('API is running');
 });
+
 
 module.exports = app;

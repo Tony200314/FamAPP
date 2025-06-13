@@ -112,40 +112,12 @@ button {
      <button id="gotologin">Already have a Account?</button>
     </div>
 
-    <script>
+    <script src="app.js">
         const redirecttoLogin = document.getElementById("gotologin"); 
 
         redirecttoLogin.addEventListener("click",function redirecttoLogin(){
             window.location.href="Loginform.html";
         });
-
-    document.getElementById('registerForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = {
-        name: form.first.value,
-        email: form.email.value,
-        password: form.password.value
-    };
-
-    try {
-        const response = await fetch('http://localhost:5000/api/auth/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-        const result = await response.json();
-        if(response.ok) {
-            alert('Registration successful!');
-            // Optionally redirect to login page:
-            // window.location.href = "Loginform.html";
-        } else {alert(result.error || 'Registration failed');
-        }
-    } catch (err) {
-        alert('Network error');
-    }
-});
-
     </script>
 </body>
 </html>

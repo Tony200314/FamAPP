@@ -2,9 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const Message = require('./models/Message');
-const authRoutes = require('./routes/auth');
-const auth = require('./middleware/auth');
+const Message = require('../models/Message');
+const authRoutes = require('../routes/auth');
+const auth = require('../middleware/auth');
+
+
 
 dotenv.config();
 const app = express();
@@ -25,7 +27,7 @@ app.get('/api/private', auth, (req, res) => {
      res.send('Hello World!');
 });
 
-app.post('/message', async (req, res) => {
+app.post('/api/message', async (req, res) => {
      const newMessage = new Message({ text: req.body.text });
      try{
          await newMessage.save();
@@ -36,7 +38,7 @@ app.post('/message', async (req, res) => {
 })
 
 mongoose
-     .connect(process.env.MONGO_URI)
+     .connect('mongodb://localhost:27017/')
      .then(() => console.log('MongoDB Connected'))
      .catch((err) => console.log('MongoDB connection error:', err));
 
