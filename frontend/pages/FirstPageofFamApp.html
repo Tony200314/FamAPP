@@ -9,18 +9,23 @@
         </head>
         <body>
             <div class="firstpage">
-                <button class="btn1">REGISTRATION</button>
-                <button class="btn2" id="btn2">LOGIN</button>
+                <li href="/register"><button class="btn1" id="btn1">REGISTRATION</button></li>
+                <li href="/login"><button class="btn2" id="btn2">LOGIN</button></li>
                 <div>
                     <button class="buttonABOUTTHEAPP">ABOUT THE WEBSITE </button>
                 </div>
             </div>
 
             <script>
-                const button1 = document.getElementById("btn2");
+                const button1 = document.getElementById("btn1")
+                const button2 = document.getElementById("btn2");
 
-                button1.addEventListener("click", function(){
+                button2.addEventListener("click", function(){
                     window.location.href = "Loginform.html";
                 }); 
+
+                button1.addEventListener("click", function(){
+                    window.location.href= "Registration.html"; 
+                })
             </script>
         </body>

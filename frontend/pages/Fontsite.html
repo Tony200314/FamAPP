@@ -6,6 +6,7 @@
              <link rel = "Stylesheet" href = "../css/Style.css">
              <meta name="Nsangou Tony" http-equiv="refresh">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
              <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -85,6 +86,52 @@
             fill: currentColor;
         }
     </style>
+=======
+
+             <style>
+              .card {
+                 width: 300px;
+                   padding: 16px;
+                    border-radius: 8px;
+                 box-shadow: 0 0 10px #ccc;
+                   display: flex;
+                    flex-direction: column;
+                 align-items: center;
+                 margin: 50vh auto 0;
+                 width: 15em;
+                 place-items: center;
+                  transform: translateY(-50%);
+              }
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: gray; /* Platzhalter für Bild */
+  margin-bottom: 16px;
+}
+
+.info-block {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  background: #f0f0f0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.spotify-bar {
+  width: 100%;
+  padding: 8px;
+  background: #1DB954; /* Spotify-Grün */
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+             </style>
+>>>>>>> be50bda8e77c2a7608321174b19192ca12ceb8cf
         </head>
         <body>
            <div class="navbar"> 
@@ -96,6 +143,7 @@
               </ul>
            </div>
 
+<<<<<<< HEAD
             
             <div class="container">
               <input type="text" placeholder="Add a new task...">
@@ -177,4 +225,35 @@
         }
             </script>
         </body>
+=======
+            <div>
+                   <div class="card">
+                  <div class="profile-pic"></div>
+                  <div>Name oder Rolle </div>
+                  <div class="info-block">Aktueller Plan</div>
+                  <div class="info-block">Nächste Termin</div>
+                  <div class="spotify-bar">🎧 Hört gerade: ...</div>
+                </div>
+            </div>
+
+            <script>
+             // Beispiel-Nutzung im Frontend (z.B. in Fontsite.html)
+document.addEventListener('DOMContentLoaded', async () => {
+    const token = await APIController.getToken();
+    const playlist = await APIController.getPlaylistByGenre(token, 'pop'); // z.B. Genre "pop"
+    if (playlist) {
+        const track = await APIController.getTrackFromPlaylist(token, playlist.id);
+        if (track) {
+            document.querySelector('.spotify-bar').innerText =
+                `🎧 Hört gerade: ${track.name} – ${track.artists.map(a => a.name).join(', ')}`;
+        } else {
+            document.querySelector('.spotify-bar').innerText = "🎧 Kein Track gefunden";
+        }
+    } else {
+        document.querySelector('.spotify-bar').innerText = "🎧 Keine Playlist gefunden";
+    }
+});
+            </script>       
+         </body>
+>>>>>>> be50bda8e77c2a7608321174b19192ca12ceb8cf
     </html>
