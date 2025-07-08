@@ -1,7 +1,5 @@
+import express from 'express';
 import bcrypt from 'bcrypt';
+import connectDB from './models/Dbconnection.js';
 
-const password = "qwerty"; 
-
-const hash = bcrypt.hashSync(password, 10);
-
-console.log(password, hash); 
+connectDB(); 
